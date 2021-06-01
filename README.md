@@ -48,7 +48,7 @@ Usage of BlackEye for attacking targets without prior mutual consent is illegal.
 ```
 $ sudo apt-get install git
 
-$ git clone https://github.com/thelinuxchoice/blackeye
+$ git clone https://github.com/kcapur/blackeye.git
 $ cd blackeye
 
 $ chmod +x blackeye.sh
