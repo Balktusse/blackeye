@@ -38,17 +38,21 @@ Facebook,Google,SnapChat,Twitter,Microsoft
 PayPal,eBay,CryptoCurrency,Verizon,Drop Box,Adobe ID,Shopify,Messenger,TwitchMyspace,Badoo,VK,Yandex,devianART
 
 #### Description
-BLACKEYE is an upgrade from original ShellPhish Tool (https://github.com/thelinuxchoice/shellphish) by thelinuxchoice under GNU LICENSE. It is the most complete Phishing Tool,  with 32 templates +1 customizable
+BLACKEYE is an upgrade from original ShellPhish Tool (https://github.com/thelinuxchoice/shellphish) by thelinuxchoice under GNU LICENSE. It is the most complete Phishing Tool,  with 40 templates +1 customizable
 
 ## Legal disclaimer:
 Usage of BlackEye for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
 
 
-### Usage:
+### Install:
 ```
+sudo apt-get install git
+
 git clone https://github.com/thelinuxchoice/blackeye
 cd blackeye
-bash blackeye.sh
+
+chmod +x blackeye.sh
+./blackeye.sh
 ```
 
 
