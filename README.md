@@ -2,7 +2,6 @@
 ### UPDATES :
 ##### Added 2 new websites!
 ##### Upgraded the phishing pages to make it look more authentic
-##### Python script to make your phising link a tinyurl link
 #### FOR ANY SUGGESTION CONTACT :@Ankitraj7079 on Twitter!
 
 -----------------------------------------------------------------------------------------------------------------------------
